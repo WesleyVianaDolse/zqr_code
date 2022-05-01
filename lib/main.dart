@@ -12,10 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Z-QrCode',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.yellow,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+            
+      home: const MyHomePage(title: 'Z-QrCode'),
     );
   }
 }
@@ -41,15 +43,17 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
+      appBar: AppBar( 
+        centerTitle: true,       
+        title: Text(widget.title,
+        ),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'You have pushed the button this many times:',
+              'Você apertou o botão tantas vezes:',
             ),
             Text(
               '$_counter',
@@ -62,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
-      ), // 
+      ), //
     );
   }
 }
